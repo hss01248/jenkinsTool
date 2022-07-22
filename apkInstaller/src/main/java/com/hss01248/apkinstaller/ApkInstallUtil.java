@@ -36,7 +36,7 @@ public class ApkInstallUtil {
             if (b) {
                 installApk(activity, file);
             } else {
-                ToastUtils.showLong("请打开本app的安装apk的权限");
+                ToastUtils.showLong(activity.getResources().getString(R.string.install_please_open_install_permission));
                 //  引导用户手动开启安装权限
                 Uri packageURI = Uri.parse("package:" + AppUtils.getAppPackageName());//设置这个才能
                 Intent intent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,packageURI);
