@@ -21,6 +21,7 @@ import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.blankj.utilcode.util.Utils;
 import com.hss01248.apkinstaller.ApkInstallUtil;
+import com.hss01248.apkinstaller.InstallCallback;
 
 
 import org.json.JSONArray;
@@ -445,7 +446,12 @@ public class JenkinsTool {
     }
 
     private static void checkAndInstall(File file, FragmentActivity activity) {
-        ApkInstallUtil.checkAndInstallApk(activity, file);
+        ApkInstallUtil.checkAndInstallApk(activity, file, new InstallCallback() {
+            @Override
+            public void onError(String code, String msg) {
+                ToastUtils.showLong(code+"\n"+msg);
+            }
+        });
     }
 
 

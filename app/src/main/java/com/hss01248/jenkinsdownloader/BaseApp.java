@@ -16,6 +16,6 @@ public class BaseApp extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        JenkinsTool.init("http://10.0.20.6:8080/job/AKULAKU_ANDROID/api/json","huangss",  "1102a6a1f528e0211de0b2cfe4a8585953");
+        JenkinsTool.init("http://xxx/api/json","yyy",  "oooo");
     }
 }
