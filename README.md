@@ -11,6 +11,25 @@ JenkinsTool.init("http://host:port/job/项目名/api/json","你的jenkins用户�
 
 ```
 
+
+
+### apk安装工具:
+
+> 内部处理了:
+
+* apk安装权限申请
+* file uri 7.0 exposed兼容
+
+```java
+ApkInstallUtil.checkAndInstallApk(String filePath, InstallCallback callback)
+```
+
+
+
+
+
+
+
 ## gradle依赖
 
 ```groovy
